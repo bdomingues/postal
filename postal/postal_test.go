@@ -32,7 +32,7 @@ func TestAddressIsCorrectlyExtractedFromURL(t *testing.T) {
 		"https://web.archive.org/web/20191229220121/https://www.springer.com/gp/standard-terms-and-conditions-of-business": {"233 Spring St, New York, NY, 10013, USA": true},
 		"https://web.archive.org/web/20190718010541/https://www.wiley.com/en-pt/terms-of-use":                              {"111 River Street, Hoboken, NJ 07030, USA": true},
 		"https://web.archive.org/web/20191230230854/https://help.netflix.com/en/node/2101":                                 {"100 Winchester Circle Los Gatos, CA 95032, USA": true},
-		"https://web.archive.org/web/20200102091051/https://www.scribd.com/contact": {"460 Bryant Street, #100 San Francisco, CA 94107-2594, USA": true},
+		"https://web.archive.org/web/20200102091051/https://www.scribd.com/contact":                                        {"460 Bryant Street, #100 San Francisco, CA 94107-2594, USA": true},
 
 		"https://web.archive.org/web/20200103180301/https://www.verizonmedia.com/policies/us/en/verizonmedia/terms/otos/index.html": {"1921 NW 87 Avenue, Doral, FL 33172, USA": true,
 			"22000 AOL Way, Dulles, VA 20166, USA": true, "701 First Avenue, Sunnyvale, CA 94089, USA": true},

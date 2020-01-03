@@ -828,4 +828,3 @@ var usStreetSuffixes = map[string]bool{
 	"XRD":        true,
 	"XRDS":       true,
 }
-
