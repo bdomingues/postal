@@ -1,3 +1,5 @@
+// Package Main is an example for the Postal package. Asks an URL input from the user and tries to extract an address
+// Written by Bernardo Domingues <bernardo.domis@gmail.com>
 package main
 
 import (

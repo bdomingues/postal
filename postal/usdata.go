@@ -1,3 +1,6 @@
+// Package postal provides a method to extract a Postal Address from a given URL
+// Currently only supports USA addresses
+// Written by Bernardo Domingues <bernardo.domis@gmail.com>
 package postal
 
 var usStates = map[string]string{
