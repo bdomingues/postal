@@ -29,13 +29,14 @@ func ExtractAddressFromUrl(url string) string {
 // It returns the found address if any is found, otherwise an empty string
 func extractAddress(tokens []string) string {
 	var waitgroup sync.WaitGroup
-	resultChannel := make(chan string, 1)
+	resultChannel := make(chan string, 1) //We are only fetching the 1st result. If we wanted multiple results (Eg: A slice), we would have a bigger buffer.
 
 	for _, token := range tokens {
 		waitgroup.Add(1)
 		go extract(token, &waitgroup, resultChannel)
 	}
 	waitgroup.Wait()
+	// Make sure we don't block if there are not results
 	select {
 	case result := <-resultChannel:
 		return result
@@ -64,6 +65,7 @@ func extract(candidate string, waitgroup *sync.WaitGroup, resultChannel chan str
 	if len(match) > 0 {
 		match = match + ", USA" //We manually append the USA as a country because it is the only one supported at this time
 		select {
+		// Make sure we don't block incase the channel is full. If it does, we terminate
 		case resultChannel <- match:
 			return
 		default:
